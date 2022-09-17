@@ -1,4 +1,3 @@
-FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel
-RUN conda install numpy matplotlib opencv tqdm pillow h5py tensorboard future
-RUN conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
-RUN conda install scipy
+FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-devel
+RUN conda install numpy matplotlib tqdm pillow h5py tensorboard future opencv
+RUN conda install scipy==1.2.1 torchvision==0.4.0
