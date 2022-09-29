@@ -6,6 +6,7 @@ RUN conda install scipy==1.2.1
 RUN conda install lxml
 RUN conda uninstall pytorch
 RUN conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch
+RUN pip install pycocotools
 RUN cd /etc/apt
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
 RUN echo "deb http://mirrors.163.com/debian/ stretch main non-free contrib" >> /etc/apt/sources.list
